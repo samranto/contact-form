@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jumia Clone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ee5f2a;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 6px;
+            display: block;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #ee5f2a;
+            box-shadow: 0 0 0 3px rgba(238, 95, 42, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        button {
+            background: #ee5f2a;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #d94e1f;
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        <form action="" method="POST">
+            <!-- First Name & Last Name -->
+            <div class="row">
+                <div>
+                    <label for="fname">First Name <span style="color:red;">*</span></label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
+                </div>
+                <div>
+                    <label for="lname">Last Name <span style="color:red;">*</span></label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <!-- Email & Phone -->
+            <div class="row">
+                <div>
+                    <label for="email">Email Address <span style="color:red;">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+234 801 234 5678">
+                </div>
+            </div>
+
+            <!-- Subject -->
+            <div>
+                <label for="subject">Subject <span style="color:red;">*</span></label>
+                <select id="subject" name="subject" required>
+                    <option value="">-- Select a reason --</option>
+                    <option value="order">Order Inquiry</option>
+                    <option value="delivery">Delivery Issue</option>
+                    <option value="return">Return & Refund</option>
+                    <option value="product">Product Question</option>
+                    <option value="payment">Payment Problem</option>
+                    <option value="account">Account Help</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Message -->
+            <div>
+                <label for="message">Your Message <span style="color:red;">*</span></label>
+                <textarea id="message" name="message" placeholder="Please describe your issue or question in detail..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>
